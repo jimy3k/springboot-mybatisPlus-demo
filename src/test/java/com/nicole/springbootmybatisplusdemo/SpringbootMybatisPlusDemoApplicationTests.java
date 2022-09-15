@@ -35,11 +35,14 @@ class SpringbootMybatisPlusDemoApplicationTests {
         //List<User> userList = userMapper.selectBatchIds(list);
         //userList.forEach(System.out::println);
 
-        Map<String,Object> map = new HashMap<>();
-        map.put("name","Bill");
-        map.put("age",23);
-        List<User> userList = userMapper.selectByMap(map);
-        userList.forEach(System.out::println);
+        //Map<String,Object> map = new HashMap<>();
+        //map.put("name","Bill");
+        //map.put("age",23);
+        //List<User> userList = userMapper.selectByMap(map);
+        //userList.forEach(System.out::println);
+
+        Map<String,Object> map = userMapper.selectMapById(3L);  //自定义方法查询数据
+        System.out.println(map);
 
         //List<User> list = userMapper.selectList(null);
         //list.forEach(System.out::println);
