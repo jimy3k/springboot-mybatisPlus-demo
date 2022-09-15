@@ -1,0 +1,12 @@
+Spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://d9city.net:8309/mybatisplus?characterEncoding=utf-8&useSSL=false   # mysql 5
+    #url: jdbc:mysql://d9city.net:8309/mybatisplus?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false  mysql 8
+    username: root
+    password: jimy3k0519
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
