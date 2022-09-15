@@ -7,6 +7,8 @@
 
     <!-- Map<String,Object> selectMapById(long id); -->
     <select id="selectMapById" resultType="map">
-        select id,name,age,email from user where id = #{id}
+        select id, name, age, email
+        from user
+        where id = #{id}
     </select>
 </mapper>

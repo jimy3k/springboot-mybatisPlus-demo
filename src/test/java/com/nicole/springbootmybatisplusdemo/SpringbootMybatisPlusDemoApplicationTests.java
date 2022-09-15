@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -41,7 +40,7 @@ class SpringbootMybatisPlusDemoApplicationTests {
         //List<User> userList = userMapper.selectByMap(map);
         //userList.forEach(System.out::println);
 
-        Map<String,Object> map = userMapper.selectMapById(3L);  //自定义方法查询数据
+        Map<String, Object> map = userMapper.selectMapById(3L);  //自定义方法查询数据
         System.out.println(map);
 
         //List<User> list = userMapper.selectList(null);

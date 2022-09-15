@@ -10,7 +10,7 @@ import java.util.Map;
 public interface UserMapper extends BaseMapper<User> {
 
     /*
-    *  根据id查询用户信息，返回结果为Map集合。 自定义方法
-    */
-    Map<String,Object> selectMapById(long id);
+     *  根据id查询用户信息，返回结果为Map集合。 自定义方法
+     */
+    Map<String, Object> selectMapById(long id);
 }
