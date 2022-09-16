@@ -8,7 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 @SpringBootTest
 class SpringbootMybatisPlusDemoApplicationTests {
@@ -40,11 +39,11 @@ class SpringbootMybatisPlusDemoApplicationTests {
         //List<User> userList = userMapper.selectByMap(map);
         //userList.forEach(System.out::println);
 
-        Map<String, Object> map = userMapper.selectMapById(3L);  //自定义方法查询数据
-        System.out.println(map);
+        //Map<String, Object> map = userMapper.selectMapById(3L);  //自定义方法查询数据
+        //System.out.println(map);
 
-        //List<User> list = userMapper.selectList(null);
-        //list.forEach(System.out::println);
+        List<User> list = userMapper.selectList(null);
+        list.forEach(System.out::println);
 
     }
 
@@ -82,7 +81,7 @@ class SpringbootMybatisPlusDemoApplicationTests {
         //map.put("age",22);
         //int result = userMapper.deleteByMap(map);
 
-        List<Long> list1 = Arrays.asList(9L,10L,11L);
+        List<Long> list1 = Arrays.asList(20L,21L,22L);
         int result = userMapper.deleteBatchIds(list1);
 
         System.out.println("删除记录行数：" + result);
