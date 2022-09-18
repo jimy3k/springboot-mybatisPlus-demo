@@ -41,7 +41,8 @@ public class MybatisPlusServiceTest {
             user.setEmail("tst" + i + "@baomidou.com");
             userList.add(user);
         }
-        boolean b = userService.saveBatch(userList);
+
+        userService.saveBatch(userList);
 
         List<User> list = userService.list();
         list.forEach(System.out::println);
