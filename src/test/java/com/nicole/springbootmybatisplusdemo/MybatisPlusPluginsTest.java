@@ -52,4 +52,41 @@ public class MybatisPlusPluginsTest {
 
     }
 
+    /*
+     * 测试分页插件
+     */
+    @Test
+    public void tstPageNationVo() {
+
+        Integer curRentPage = 3;
+        Integer pageSize = 3;
+
+        Page<User> page = new Page<>();
+
+        page.setCurrent(curRentPage);
+        page.setSize(pageSize);
+
+        userMapper.selectPageVo(page, 20);
+
+        System.out.println("===========当前页：" + curRentPage + "===========");
+        List<User> userList = page.getRecords();   //当前页的所有记录集合列表
+        userList.forEach(System.out::println);
+
+        curRentPage++;
+        page.setCurrent(curRentPage);
+
+        userMapper.selectPageVo(page, 20);
+
+        System.out.println("===========当前页：" + curRentPage + "===========");
+        userList = page.getRecords();   //当前页的所有记录集合列表
+        userList.forEach(System.out::println);
+
+        System.out.println("当前页/总页数：" + page.getCurrent() + "/" + page.getPages());
+        System.out.println("总记录数：" + page.getTotal());
+
+        System.out.println("有上一页：" + (page.hasPrevious() ? "有" : "无"));
+        System.out.println("有下一页：" + (page.hasNext() ? "有" : "无"));
+
+    }
+
 }

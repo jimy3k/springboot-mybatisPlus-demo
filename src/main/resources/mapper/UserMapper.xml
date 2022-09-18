@@ -7,8 +7,15 @@
 
     <!-- Map<String,Object> selectMapById(long id); -->
     <select id="selectMapById" resultType="map">
-        select id, name, age, email
+        select *
         from user
         where id = #{id}
+    </select>
+
+    <!-- Page<User> selectPageVo(@Param("page") Page<User> page,@Param("age") Integer age); -->
+    <select id="selectPageVo" resultType="User">
+        select *
+        from user
+        where age >= #{age}
     </select>
 </mapper>

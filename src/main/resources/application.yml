@@ -14,3 +14,5 @@ mybatis-plus:
   global-config:
     db-config:
       table-prefix: t_        #设置实体类对应表名的统一前缀：t_
+  # 配置类型别名所对应的包  mapper中 *Mapper.xml 使用类型别名，会用到。
+  type-aliases-package: com.nicole.springbootmybatisplusdemo.pojo
