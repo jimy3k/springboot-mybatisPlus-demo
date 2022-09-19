@@ -1,5 +1,6 @@
 package com.nicole.springbootmybatisplusdemo.mapper;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.nicole.springbootmybatisplusdemo.pojo.User;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Map;
 
+@DS("master")    //指定数据源
 @Repository   //将类或者接口 标识为持久层组件
 public interface UserMapper extends BaseMapper<User> {
 

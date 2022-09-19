@@ -81,7 +81,7 @@ class SpringbootMybatisPlusDemoApplicationTests {
         //map.put("age",22);
         //int result = userMapper.deleteByMap(map);
 
-        List<Long> list1 = Arrays.asList(20L,21L,22L);
+        List<Integer> list1 = Arrays.asList(20, 21, 22);
         int result = userMapper.deleteBatchIds(list1);
 
         System.out.println("删除记录行数：" + result);
@@ -98,7 +98,7 @@ class SpringbootMybatisPlusDemoApplicationTests {
         //通过Mapper接口，更新数据
 
         User user = new User();
-        user.setId(5L);
+        user.setId(5);
         user.setName("Bill");
         user.setAge(23);
         user.setEmail("bill@baomidou.com");

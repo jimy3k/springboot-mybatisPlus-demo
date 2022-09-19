@@ -33,6 +33,12 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.2</version>
         </dependency>
+        <!-- mybatis-plus 多数据源支持 启动器 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>3.5.2</version>
+        </dependency>
         <!-- Lombok 用于简化实体类开发 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
